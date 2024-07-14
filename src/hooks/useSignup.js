@@ -12,11 +12,7 @@ export const useSignup = () => {
     setError(null);
 
     try {
-      const response = await axios.get('https://mern-pokedex-be.onrender.com/api/user/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
+      const response = await axios.post('https://mern-pokedex-be.onrender.com/api/user/signup', { email, password });
 
       if (!response.ok) {
         const json = await response.json();
