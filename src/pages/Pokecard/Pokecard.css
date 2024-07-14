@@ -1,0 +1,89 @@
+.pokecard {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pokecard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-name {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.pokemon-image {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.pokemon-abilities,
+.pokemon-types {
+  color: #555;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.pokemon-type {
+  display: inline-block;
+  margin: 2px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+
+.pokemon-type-normal { background-color: #a8a878; }
+.pokemon-type-fire { background-color: #f08030; }
+.pokemon-type-water { background-color: #6890f0; }
+.pokemon-type-electric { background-color: #f8d030; }
+.pokemon-type-grass { background-color: #78c850; }
+.pokemon-type-ice { background-color: #98d8d8; }
+.pokemon-type-fighting { background-color: #c03028; }
+.pokemon-type-poison { background-color: #a040a0; }
+.pokemon-type-ground { background-color: #e0c068; }
+.pokemon-type-flying { background-color: #a890f0; }
+.pokemon-type-psychic { background-color: #f85888; }
+.pokemon-type-bug { background-color: #a8b820; }
+.pokemon-type-rock { background-color: #b8a038; }
+.pokemon-type-ghost { background-color: #705898; }
+.pokemon-type-dragon { background-color: #7038f8; }
+.pokemon-type-dark { background-color: #705848; }
+.pokemon-type-steel { background-color: #b8b8d0; }
+.pokemon-type-fairy { background-color: #ee99ac; }
+
+.pokemon-abilities {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.save-button {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+.pokecard:hover .save-button {
+  display: block; /* Show on hover */
+}

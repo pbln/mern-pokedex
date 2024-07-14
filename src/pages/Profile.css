@@ -1,0 +1,80 @@
+/* Profile.css */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+  }
+  
+  .profile-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .edit-button {
+    background-color: #303d34;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #494a4a;
+  }
+  
+  .favorites-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  .favorites-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Increased gap for better spacing */
+  }
+  
+  .favorite-pokemon-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Increased padding */
+    text-align: center;
+    width: 200px; /* Increased width */
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .pokemon-image {
+    width: 120px; /* Increased width */
+    height: 120px; /* Increased height */
+    margin-bottom: 10px; /* Increased margin-bottom */
+  }
+  
+  .pokemon-name {
+    color: #333;
+    font-size: 1.2rem; /* Increased font-size */
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+  }
+  

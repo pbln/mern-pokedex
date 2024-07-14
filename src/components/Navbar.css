@@ -1,0 +1,75 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar-title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links,
+nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navbar-link {
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #007bff;
+}
+
+.nav-button {
+  background-color: #ffcc00;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 252, 104, 0.8);
+  color: black;
+}
+
+.fav-icon,
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fav-icon:hover,
+.profile-icon:hover {
+  transform: scale(1.1);
+}
