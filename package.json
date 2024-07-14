@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:5000",
+  "proxy": "https://mern-pokedex-be.onrender.com",
   "name": "pokedex",
   "version": "0.1.0",
   "private": true,
