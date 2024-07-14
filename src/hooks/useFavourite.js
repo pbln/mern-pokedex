@@ -5,7 +5,7 @@ export const useFav = ()=>{
 
     const addtofav = async(user,pokemon) =>{
         try {
-          const response = await fetch('/api/user/fav/add', {
+          const response = await fetch('https://mern-pokedex-be.onrender.com/api/user/fav/add', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({  email : user.user.email, pokemon })
