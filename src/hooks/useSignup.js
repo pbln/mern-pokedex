@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import { useAuthContext } from './useAuthContext';
 
 export const useSignup = () => {
@@ -11,7 +12,7 @@ export const useSignup = () => {
     setError(null);
 
     try {
-      const response = await fetch('/api/user/signup', {
+      const response = await axios.get('https://mern-pokedex-be.onrender.com/api/user/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
