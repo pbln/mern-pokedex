@@ -33,7 +33,7 @@ export const useFav = ()=>{
 
     const removefromfav = async(user,pokemon)=>{
         try{
-          const response = await fetch('/api/user/fav/dlt', {
+          const response = await fetch('https://mern-pokedex-be.onrender.com/api/user/fav/dlt', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({  email : user.user.email, pokemon })
