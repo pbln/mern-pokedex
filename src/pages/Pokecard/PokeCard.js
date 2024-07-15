@@ -37,10 +37,12 @@ const Pokecard = ({ pokemon }) => {
 
     }
 
+    
+
   return (
     <Link to={`/pokemon/${pokemon.name}`} className="pokecard">
       <li>
-        <h2 className="pokemon-name">{pokemon.name}</h2>
+        <div className="pokemon-name">{pokemon.name}</div>
         <img className="pokemon-image" src={`https://img.pokemondb.net/artwork/${pokemon.name}.jpg`} alt={pokemon.name} />
         <p className="pokemon-abilities">Abilities: {pokemon.abilities.join(', ')}</p>
         <p className="pokemon-types">
