@@ -1,10 +1,10 @@
-/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .navbar {
-  background-color: #ffcc00;
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .navbar-container {
   display: flex;
@@ -25,13 +25,14 @@
 .navbar-links,
 nav {
   display: flex;
-  gap: 15px;
+  gap: 35px;
   align-items: center;
 }
 
 .navbar-link {
   color: #333;
   font-size: 1rem;
+  font-family: 'Press Start 2P', cursive;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -41,22 +42,23 @@ nav {
 }
 
 .nav-button {
-  background-color: #ffcc00;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Press Start 2P', cursive;
   border: none;
   color: black;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 15px;
+  margin: 4px;
   transition: background-color 0.4s ease;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 252, 104, 0.8);
+  background-color: rgba(235, 234, 234, 0.8);
   color: black;
 }
 
