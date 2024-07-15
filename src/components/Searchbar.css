@@ -1,3 +1,5 @@
+
+
 .search-bar {
     display: flex;
     justify-content: space-between;
@@ -7,17 +9,29 @@
   
   .search-bar input {
     padding: 10px;
-    font-size: 16px;
+    font-size: 10px;
     border: 1px solid #ccc;
+    font-family: 'Press Start 2P', cursive;
     border-radius: 4px;
     width: 60%;
   }
   
   .search-bar select {
     padding: 10px;
-    font-size: 16px;
+    font-size: 16x;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 35%;
   }
+
   
+  .search-bar button{
+    padding: 10px 20px;
+    font-size: 10px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
