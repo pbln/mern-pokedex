@@ -15,10 +15,17 @@ const handlesearch = ()=>{
 
 }
 
+const handleKeyDown = (event) => {
+  if (event.key === 'Enter') {
+    handlesearch();
+  }
+};
+
+
   return (
     <div className='search-bar'>
-      <input type='text' placeholder='Enter name' onChange={(e)=>setSearch(e.target.value)} value={search}/>
-      <button onClick={handlesearch} > Search </button>
+      <input type='text' placeholder='Enter name' onChange={(e)=>setSearch(e.target.value)} value={search} onKeyDown={handleKeyDown}/>
+      <button onClick={handlesearch}  > Search </button>
       <select value={type} onChange={(e)=>setType(e.target.value)}>
         <option value="">All Types</option>
         <option value="normal">Normal</option>
