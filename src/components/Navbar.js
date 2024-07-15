@@ -12,14 +12,14 @@ const Navbar = () => {
     logout();
   };
 
-  const profileImg = user?.user?.img || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'; // Default profile icon CDN link
-  const favImg = 'https://cdn-icons-png.flaticon.com/512/1077/1077035.png'; // Default favorite icon CDN link
+  const profileImg = user?.user?.img || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'; 
+  const favImg = 'https://cdn-icons-png.flaticon.com/512/1077/1077035.png'; 
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-title">
-          Pokedex
+          <img className='imge'  src='https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png'/>
         </Link>
         
         <nav>
