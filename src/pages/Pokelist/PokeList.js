@@ -21,7 +21,7 @@ export default function PokeList() {
             setLoading(true);
             try {
                 console.log('Fetching pokemons with offset:', offset);
-                let url = `https://mern-pokedex-be.onrender.com/api/pokemons?offset=${offset}&limit=20`;
+                let url = `http://localhost:5000/api/pokemons?offset=${offset}&limit=20`;
                
                 const response = await axios.get(url);
 
@@ -69,7 +69,7 @@ export default function PokeList() {
                 ))}
             </ul>
             
-            <button onClick={loadMore} disabled={loading}>
+            <button className='list-btn' onClick={loadMore} disabled={loading}>
                 {loading ? "Loading ....." : 'Load more'}
             </button>
         </div>
