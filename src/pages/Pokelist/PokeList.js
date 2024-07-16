@@ -21,9 +21,10 @@ export default function PokeList() {
             setLoading(true);
             try {
                 console.log('Fetching pokemons with offset:', offset);
-                let url = `https://mern-pokedex-be.onrender.com/api/pokemons?offset=${offset}&limit=20`;
-               
-                const response = await axios.get(url);
+
+                const response = await fetch(`https://mern-pokedex-be.onrender.com/api/pokemons?offset=${offset}&limit=20`, {
+                method: 'GET',
+              });
 
                 if (offset === 0) {
                     setPokemons(response.data); 
