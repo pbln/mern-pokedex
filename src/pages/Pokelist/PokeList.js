@@ -11,7 +11,6 @@ export default function PokeList() {
     const [offset, setOffset] = useState(0);
     const [type, setType] = useState('');
 
-
     const loadMore = () => {
         setOffset(prevOffset => prevOffset + 20);
     };
@@ -22,9 +21,7 @@ export default function PokeList() {
             try {
                 console.log('Fetching pokemons with offset:', offset);
 
-                const response = await fetch(`https://mern-pokedex-be.onrender.com/api/pokemons?offset=${offset}&limit=20`, {
-                method: 'GET',
-              });
+                const response = await axios.get(`https://mern-pokedex-be.onrender.com/api/pokemons?offset=${offset}&limit=20`);
 
                 if (offset === 0) {
                     setPokemons(response.data); 
@@ -39,27 +36,25 @@ export default function PokeList() {
         };
 
         fetchPokemons(); 
-
-         
       
     }, [offset]); 
 
     useEffect(() => {
-        if (type) {
-            const newFilteredPokemons = pokemons.filter(pokemon =>
-                pokemon.types && pokemon.types.some(t => t.toLowerCase().includes(type.toLowerCase()))
-            );
-            setFilteredPokemons(newFilteredPokemons);
-            
-            if (newFilteredPokemons.length === 0) {
-                loadMore();
+        if (pokemons.length > 0) {
+            if (type) {
+                const newFilteredPokemons = pokemons.filter(pokemon =>
+                    pokemon.types && pokemon.types.some(t => t.toLowerCase().includes(type.toLowerCase()))
+                );
+                setFilteredPokemons(newFilteredPokemons);
+
+                if (newFilteredPokemons.length === 0) {
+                    loadMore();
+                }
+            } else {
+                setFilteredPokemons(pokemons);
             }
-        } else {
-            setFilteredPokemons(pokemons);
         }
     }, [type, pokemons]);
-
-    
 
     return (
         <div>
