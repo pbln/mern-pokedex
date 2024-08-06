@@ -118,6 +118,7 @@
 
   .logo-image {
     width: 250px; /* Adjust the width as necessary */
+    margin-top: 20px;
   }
 
   .user-links {
@@ -131,9 +132,13 @@
 @media (max-width: 480px) {
   .logo-image {
     width: 200px; /* Adjust the width as necessary */
+    margin-top: 15px;
+  }
+  .user-links {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    gap: 7px;
   }
 
-  .user-links {
-    gap: 5px;
-  }
 }
