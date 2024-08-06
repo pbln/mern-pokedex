@@ -87,3 +87,53 @@
 .profile-icon:hover {
   transform: scale(1.1);
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .logo-image {
+    width: 300px; /* Adjust the logo size for medium screens */
+  }
+  .navbar-link {
+    font-size: 0.7rem; /* Adjust the font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .top-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+  }
+
+  .navbar-container {
+    width: auto;
+  }
+
+  .logo-image {
+    width: 250px; /* Adjust the width as necessary */
+  }
+
+  .user-links {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    width: 200px; /* Adjust the width as necessary */
+  }
+
+  .user-links {
+    gap: 5px;
+  }
+}
