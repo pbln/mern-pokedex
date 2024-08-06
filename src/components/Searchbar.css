@@ -1,37 +1,84 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .search-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar input {
-    padding: 10px;
-    font-size: 10px;
-    border: 1px solid #ccc;
-    font-family: 'Press Start 2P', cursive;
-    border-radius: 4px;
-    width: 60%;
-  }
-  
-  .search-bar select {
-    padding: 10px;
-    font-size: 16x;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 35%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the elements */
+  align-items: center;
+  gap: 2px; /* Space between elements */
+  margin-bottom: 20px;
+}
 
-  
-  .search-bar button{
-    padding: 10px 20px;
-    font-size: 10px;
-    font-family: 'Press Start 2P', cursive;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.search-bar input,
+.search-bar button {
+  padding: 10px; /* Adjusted padding */
+  font-size: 10px; /* Slightly larger font size */
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 35px; /* Consistent height */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  max-width: 300px; /* Adjusted max-width */
+}
+
+.search-bar select {
+  height: 35px;
+  padding: 5px;
+  font-size: 15px;
+  max-width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+  .search-bar select {
+    margin-left: 650px; /* Larger margin-left on very large screens */
   }
+}
+
+/* Media query for medium screens */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .search-bar select {
+    margin-left: 20px; /* Medium margin-left */
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .search-bar select {
+    margin-left: 10px; /* Smaller margin-left on smaller screens */
+  }
+}
+
+/* General button styling */
+.search-bar button {
+  background-color: #214A22;
+  padding: 10px 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #056109;
+}
+
+/* Media query for extra-small screens */
+@media (max-width: 600px) {
+  .search-bar {
+    gap: 1px; 
+  }
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    width: 30%;
+    font-size: 9px; /* Adjust font size for smaller screens */
+    padding: 10px 10px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    max-width: 100%; /* Full width on small screens */
+  }
+  .search-bar button {
+    margin-right: 8px; /* Remove margin-right on small screens */
+    width: 80px;
+  }
+}
