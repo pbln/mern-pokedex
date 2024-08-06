@@ -1,4 +1,3 @@
-
 .pokecard {
   background-color: #ffffff;
   border-radius: 15px;
@@ -9,6 +8,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   text-decoration: none;
   color: inherit;
+  margin: 10px; /* Add margin for better spacing */
 }
 
 .pokecard:hover {
@@ -47,7 +47,6 @@
   text-transform: capitalize;
 }
 
-
 .pokemon-type-normal { background-color: #a8a878; }
 .pokemon-type-fire { background-color: #f08030; }
 .pokemon-type-water { background-color: #4368be; }
@@ -84,9 +83,21 @@
   font-size: 0.6rem;
   cursor: pointer;
   display: none; 
-  
 }
 
 .pokecard:hover .save-button {
   display: block; 
+}
+
+/* Media Queries for .pokecard */
+@media (max-width: 808px) {
+  .pokecard {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .pokecard {
+   padding: 9px; 
+  }
 }
