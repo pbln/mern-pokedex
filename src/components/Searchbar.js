@@ -1,32 +1,35 @@
-import React , { useState } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Searchbar.css'
+import './Searchbar.css';
 
 export default function Searchbar({ type, setType }) {
-const [search, setSearch]= useState('')
-const navigate = useNavigate();
+  const [search, setSearch] = useState('');
+  const navigate = useNavigate();
 
-const handlesearch = ()=>{
-    if(search.trim()) {
-        const s = search.toLocaleLowerCase()
-        navigate(`/pokemon/${s}`);
+  const handleSearch = () => {
+    if (search.trim()) {
+      const s = search.toLocaleLowerCase();
+      navigate(`/pokemon/${s}`);
     }
+  };
 
-
-}
-
-const handleKeyDown = (event) => {
-  if (event.key === 'Enter') {
-    handlesearch();
-  }
-};
-
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <div className='search-bar'>
-      <input type='text' placeholder='Enter name' onChange={(e)=>setSearch(e.target.value)} value={search} onKeyDown={handleKeyDown}/>
-      <button onClick={handlesearch}  > Search </button>
-      <select value={type} onChange={(e)=>setType(e.target.value)}>
+      <input
+        type='text'
+        placeholder='Enter name'
+        onChange={(e) => setSearch(e.target.value)}
+        value={search}
+        onKeyDown={handleKeyDown}
+      />
+      <button onClick={handleSearch}>Search</button>
+      <select value={type} onChange={(e) => setType(e.target.value)}>
         <option value="">All Types</option>
         <option value="normal">Normal</option>
         <option value="fire">Fire</option>
@@ -48,5 +51,5 @@ const handleKeyDown = (event) => {
         <option value="fairy">Fairy</option>
       </select>
     </div>
-  )
+  );
 }
