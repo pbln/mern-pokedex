@@ -69,9 +69,11 @@ export default function PokeList() {
                 ))}
             </ul>
             
-            <button className='list-btn' onClick={loadMore} disabled={loading}>
-                {loading ? "Loading ....." : 'Load more'}
-            </button>
+            <div className='list-btn-container'>
+                <button className='list-btn' onClick={loadMore} disabled={loading}>
+                    {loading ? "Loading ....." : 'Load more'}
+                </button>
+            </div>
         </div>
     );
 }
