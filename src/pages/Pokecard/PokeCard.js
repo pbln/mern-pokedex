@@ -46,7 +46,6 @@ const Pokecard = ({ pokemon }) => {
         <img className="pokemon-image" src={`https://img.pokemondb.net/artwork/${pokemon.name}.jpg`} alt={pokemon.name} />
         <p className="pokemon-abilities">Abilities: {pokemon.abilities.join(', ')}</p>
         <p className="pokemon-types">
-          Types: 
           {pokemon.types.map(type => (
             <span key={type} className={`pokemon-type pokemon-type-${type.toLowerCase()}`}>
               {type}
