@@ -7,9 +7,8 @@ export default function Profile() {
   return (
     <div className="profile-container">
     <div className="profile-card">
-      <img className="profile-photo" src="pokedex\public\polar_bear.png" alt="Profile" />
-      <h2>{user?.user?.email}</h2>
-      <button className="edit-button">Edit Profile</button>
+      <h2>Welcome {user?.user?.email} !</h2>
+      <button className="edit-button">Add pokemon</button>
     </div>
   </div>
   )
