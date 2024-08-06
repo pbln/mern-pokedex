@@ -9,6 +9,7 @@
   margin: 10px 40px;
   border-radius: 15px;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .pokemon-left-info {
@@ -140,4 +141,111 @@
   font-weight: bold;
   font-size: 1.5rem;
   margin-right: 10px;
+}
+
+/* Media Queries */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .pokemon-detail-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pokemon-left-info, .pokemon-right-info {
+    width: 80%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .pokemon-detail-container {
+    margin: 10px 20px;
+    padding: 10px;
+  }
+
+  .pokemon-left-info, .pokemon-right-info {
+    width: 100%;
+  }
+
+  .abt, .pokemon-abilities p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .pokemon-left-info h1, .pokemon-right-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .pokemon-left-info img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .evolution-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .evolution-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .evolution-name {
+    font-size: 18px;
+  }
+
+  .evolution-arrow {
+    font-size: 1.2rem;
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .pokemon-detail-container {
+    margin: 10px 10px;
+    padding: 5px;
+  }
+
+  .pokemon-left-info img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pokemon-abilities p {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .abt {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+
+  .pokemon-left-info h1, .pokemon-right-info h3 {
+    font-size: 1rem;
+  }
+
+  .evolution-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .evolution-name {
+    font-size: 16px;
+  }
+
+  .evolution-arrow {
+    font-size: 1rem;
+  }
 }
