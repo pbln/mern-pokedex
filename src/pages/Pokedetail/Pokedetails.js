@@ -28,7 +28,7 @@ const PokemonDetail = () => {
     fetchPokemonDetails();
   }, [name]);
 
-  if (!pokemon || !species || !evolution) return <div>Loading...</div>;
+  if (!pokemon || !species || !evolution) return <div className='list-btn'>Loading...</div>;
 
   return (
     <div className="pokemon-detail-container">
