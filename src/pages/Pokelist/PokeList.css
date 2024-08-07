@@ -24,19 +24,19 @@ select {
 
 .list-btn {
   padding: 10px 20px;
-  font-size: 10px;
+  font-size: 16px;
   font-family: 'Press Start 2P', cursive;
   height: 40px;
-  background-color: #214A22;
-  color: white;
+  background-color: white;
   border: none;
-  border-radius: 5px;
+  color: #214A22;
   cursor: pointer;
   margin: 50px;
 }
 
-button:hover {
-  background-color: #056109;
+.list-btn:hover {
+  background-color: #f0f0f0;
+  border: #214A22;
 }
 
 .pokemon-list {
