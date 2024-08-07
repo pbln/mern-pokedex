@@ -143,9 +143,7 @@
   margin-right: 10px;
 }
 
-/* Media Queries */
 
-/* For tablets and small desktops */
 @media (max-width: 1024px) {
   .pokemon-detail-container {
     flex-direction: column;
@@ -158,11 +156,11 @@
   }
 }
 
-/* For mobile devices */
 @media (max-width: 768px) {
   .pokemon-detail-container {
+    flex-direction: row;
     margin: 10px 20px;
-    padding: 10px;
+    padding: 15px;
   }
 
   .pokemon-left-info, .pokemon-right-info {
@@ -188,7 +186,7 @@
   }
 
   .evolution-list {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 
@@ -206,9 +204,10 @@
   }
 }
 
-/* For very small mobile devices */
+
 @media (max-width: 480px) {
   .pokemon-detail-container {
+    flex-direction: row;
     margin: 10px 10px;
     padding: 5px;
   }
