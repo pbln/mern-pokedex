@@ -10,10 +10,13 @@ export default function Profile() {
     const handleLogout = () => {
       logout();
     };
+
+  const email = user?.user?.email;
+  const username = email ? email.split('@')[0] : '';
   return (
     <div className="profile-container">
     <div className="profile-card">
-      <h2>Welcome {user?.user?.email} !</h2>
+      <h2>Welcome {username} !</h2>
       <button className="edit-button" onClick={handleLogout}>Logout</button>
     </div>
   </div>
