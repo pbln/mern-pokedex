@@ -35,16 +35,16 @@
 
 .user-links {
   display: flex;
-  gap: 6px;
+  gap: 7px;
   align-items: center;
-  position: absolute; /* Absolute positioning to keep it in the top right */
+  position: absolute; 
   right: 20px;
 }
 
 .navbar-link {
   color: #333;
   font-family: 'Press Start 2P', cursive;
-  margin: 5px;
+  margin: 7px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -74,10 +74,16 @@
   color: black;
 }
 
-.fav-icon,
-.profile-icon {
+.fav-icon{
   width: 30px;
   height: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.profile-icon{
+  width: 40px;
+  height: 40px;
   margin-left: 15px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -94,7 +100,7 @@
     width: 300px; /* Adjust the logo size for medium screens */
   }
   .navbar-link {
-    font-size: 0.7rem; /* Adjust the font size for medium screens */
+    font-size: 0.6rem; /* Adjust the font size for medium screens */
   }
 }
 
