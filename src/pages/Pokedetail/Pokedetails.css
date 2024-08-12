@@ -13,6 +13,7 @@
 }
 
 .pokemon-left-info {
+  position: relative;
   border-radius: 15px;
   padding: 20px;
   width: 35%;
@@ -47,18 +48,29 @@
   line-height: 25px;
 }
 
+
+
 .pokemon-left-info h1, .pokemon-right-info h3 {
   font-family: 'Press Start 2P', cursive;
   color: #333;
   text-transform: capitalize;
 }
 
-.pokemon-left-info img {
+.left-poke {
   width: 200px;
   height: 200px;
   margin: 20px 0;
 }
 
+.fav {
+  position: absolute; 
+  top: 23px; 
+  right: 25px; 
+  width: 30px;  /* Adjust the width to make it smaller */
+  height: 30px; /* Keep height consistent with width */
+  cursor: pointer;  /* Make it look clickable */
+  margin: 22px;
+}
 .pokemon-abilities p {
   background-color: rgb(222, 220, 220);
   padding: 20px;
@@ -93,6 +105,8 @@
   color: #ffffff;
   text-transform: capitalize;
 }
+
+
 
 .pokemon-type-normal { background-color: #727235; }
 .pokemon-type-fire { background-color: #be663d; }
@@ -180,11 +194,15 @@
     font-size: 1.2rem;
   }
 
-  .pokemon-left-info img {
+  .left-poke {
     width: 150px;
     height: 150px;
   }
-
+  
+  .fav{
+    width: 30px ;
+    height: 30px;
+  }
   .evolution-list {
     flex-direction: row;
     gap: 10px;
@@ -212,11 +230,15 @@
     padding: 5px;
   }
 
-  .pokemon-left-info img {
+  .left-poke {
     width: 120px;
     height: 120px;
   }
-
+  
+  .fav{
+    width: 25px ;
+    height: 25px;
+  }
   .pokemon-abilities p {
     font-size: 14px;
     padding: 8px;
