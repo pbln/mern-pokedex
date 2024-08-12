@@ -5,7 +5,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const { user } = useAuthContext();
-  const profileImg = user?.user?.img || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'; 
+  const profileImg = 'https://static.vecteezy.com/ti/vecteur-libre/p1/5544753-profil-icone-design-vecteur-gratuit-vectoriel.jpg'; 
   const favImg = 'https://cdn-icons-png.flaticon.com/512/1077/1077035.png'; 
 
   return (
