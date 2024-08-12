@@ -3,6 +3,7 @@ import axios from 'axios';
 import './PokeList.css';
 import Pokecard from '../Pokecard/PokeCard';
 import Searchbar from '../../components/Searchbar';
+import customPokemon from '../../customPokemon'; 
 
 export default function PokeList() {
     const [pokemons, setPokemons] = useState([]);
@@ -10,7 +11,6 @@ export default function PokeList() {
     const [loading, setLoading] = useState(false);
     const [offset, setOffset] = useState(0);
     const [type, setType] = useState('');
-
 
     const loadMore = () => {
         setOffset(prevOffset => prevOffset + 20);
@@ -20,28 +20,26 @@ export default function PokeList() {
         const fetchPokemons = async () => {
             setLoading(true);
             try {
-                console.log('Fetching pokemons with offset:', offset);
                 let url = `https://mern-pokedex-be.onrender.com/api/pokemons?offset=${offset}&limit=20`;
-               
                 const response = await axios.get(url);
 
+                const fetchedPokemons = response.data;
+                const allPokemons = [ ...customPokemon,...fetchedPokemons]; // merge with custom Pokémon
+
                 if (offset === 0) {
-                    setPokemons(response.data); 
+                    setPokemons(allPokemons);
                 } else {
-                    setPokemons(prevPokemons => [...prevPokemons, ...response.data]); 
+                    setPokemons(prevPokemons => [...prevPokemons, ...allPokemons]);
                 }
             } catch (error) {
-                console.error('Error fetching Pokemon data:', error);
+                console.error('Error fetching Pokémon data:', error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchPokemons(); 
-
-         
-      
-    }, [offset]); 
+        fetchPokemons();
+    }, [offset]);
 
     useEffect(() => {
         if (type) {
@@ -49,7 +47,7 @@ export default function PokeList() {
                 pokemon.types && pokemon.types.some(t => t.toLowerCase().includes(type.toLowerCase()))
             );
             setFilteredPokemons(newFilteredPokemons);
-            
+
             if (newFilteredPokemons.length === 0) {
                 loadMore();
             }
@@ -57,8 +55,6 @@ export default function PokeList() {
             setFilteredPokemons(pokemons);
         }
     }, [type, pokemons]);
-
-    
 
     return (
         <div>
@@ -68,7 +64,6 @@ export default function PokeList() {
                     <Pokecard pokemon={pokemon} key={index} />
                 ))}
             </ul>
-            
             <div className='list-btn-container'>
                 <button className='list-btn' onClick={loadMore} disabled={loading}>
                     {loading ? "Loading ....." : 'Load more'}
