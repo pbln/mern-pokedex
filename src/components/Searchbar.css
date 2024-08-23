@@ -29,15 +29,30 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* Media query for larger screens */
-@media (min-width: 1200px) {
+@media (min-width:1300px) {
   .search-bar select {
-    margin-left: 650px; /* Larger margin-left on very large screens */
+    margin-left: 700px; /* Larger margin-left on very large screens */
+  } 
+}
+
+@media (min-width:1250px) and (max-width:1300px) {
+  .search-bar select {
+    margin-left: 600px; /* Larger margin-left on very large screens */
+  } 
+}
+@media (min-width:1100px) and (max-width:1250px) {
+  .search-bar select {
+    margin-left: 550px; /* Larger margin-left on very large screens */
+  } 
+}
+@media (min-width: 1000px) and (max-width:1100px){
+  .search-bar select {
+    margin-left: 450px; /* Larger margin-left on very large screens */
   }
 }
 
 /* Media query for medium screens */
-@media (max-width: 1200px) and (min-width: 768px) {
+@media (max-width: 1000px) and (min-width: 768px) {
   .search-bar select {
     margin-left: 20px; /* Medium margin-left */
   }
