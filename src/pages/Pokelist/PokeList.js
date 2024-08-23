@@ -6,7 +6,7 @@ import Searchbar from '../../components/Searchbar';
 import customPokemon from '../../customPokemon'; 
 
 export default function PokeList() {
-    const [pokemons, setPokemons] = useState([]);
+    const [pokemons, setPokemons] = useState(customPokemon);
     const [filteredPokemons, setFilteredPokemons] = useState([]);
     const [loading, setLoading] = useState(false);
     const [offset, setOffset] = useState(0);
@@ -24,11 +24,13 @@ export default function PokeList() {
                 const response = await axios.get(url);
 
                 const fetchedPokemons = response.data;
-                const allPokemons = [ ...customPokemon,...fetchedPokemons]; // merge with custom Pokémon
+                let allPokemons  ; 
 
                 if (offset === 0) {
+                    allPokemons = [...customPokemon , ...fetchedPokemons] ;
                     setPokemons(allPokemons);
                 } else {
+                    allPokemons = [...fetchedPokemons]
                     setPokemons(prevPokemons => [...prevPokemons, ...allPokemons]);
                 }
             } catch (error) {
