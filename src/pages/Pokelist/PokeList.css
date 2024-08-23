@@ -44,7 +44,8 @@ select {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 0;
-  margin: 0 100px;
+  max-width: 1200px; /* Set a max width for the list */
+  margin: 0 auto; /* Center align with auto margins */
   list-style-type: none;
   justify-items: center;
 }
@@ -52,21 +53,21 @@ select {
 @media (max-width: 1200px) {
   .pokemon-list {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin: 0 50px;
+    max-width: 1000px; /* Adjust the max width */
   }
 }
 
 @media (max-width: 768px) {
   .pokemon-list {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin: 0 20px;
+    max-width: 600px; /* Adjust max width for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .pokemon-list {
     grid-template-columns: repeat(1, 1fr); 
-    margin: 0 10px;
+    max-width: 100%;
     gap: 10px; 
   }
 }
