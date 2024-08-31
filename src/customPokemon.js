@@ -13,8 +13,8 @@ const customPokemons = [
       abilities: ['Aqua', 'Spog Steel'],
       types: ['water', 'steel'],
       customImage: s1 ,
-      height: 1.1,
-     weight: 7,
+      height: 110,
+     weight: 70,
     abt: "Pirafee's metal ring boosts its agility in water, increasing evasion against Water-type moves, while its innocent eyes subtly trap opponents.",
     evolution: [
       { name: 'Pirafee', image: s1 },
@@ -27,8 +27,8 @@ const customPokemons = [
       abilities: ['Sturdy Gyro', 'Intimidate'],
       types: ['water', 'steel'],
       customImage: s2 ,
-      height:1.8,
-     weight: 92,
+      height:180,
+     weight: 920,
     abt: "Sharfee's metal rings open into a semicircle, boosting its water mobility for swift, slicing attacks, making it appear to vanish in a flash.",
     evolution: [
       { name: 'Pirafee', image: s1 },
@@ -41,8 +41,8 @@ const customPokemons = [
       abilities: ['Roll Attack', 'High Speed'],
       types: ['water', 'steel','rock'],
       customImage: s3 ,
-      height:2,
-     weight: 105,
+      height:210,
+     weight: 1050,
     abt: "Megafeor's dual spinning rings let it move swiftly on land and water. Its oxygen-trapping skin and gyro-like structure make it a powerful battle force.",
     evolution: [
       { name: 'Pirafee', image: s1 },
@@ -111,7 +111,7 @@ const customPokemons = [
     {
       name: 'Nyxle',
       abilities: ['Moonplay', 'Shadow skill'],
-      types: ['psychic', 'dark','flying'],
+      types: ['psychic', 'flying'],
       customImage: j2 ,
       height: 90,
       weight: 214,
@@ -125,7 +125,7 @@ const customPokemons = [
     {
       name: 'Nyxellite',
       abilities: ['Royal glow', 'Celestial'],
-      types: ['psychic', 'dark','flying'],
+      types: ['psychic','flying'],
       customImage: j3 ,
       height: 18,
       weight: 330,
